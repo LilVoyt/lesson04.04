@@ -1,6 +1,4 @@
-﻿//                              Четверте квітня 
-//                               Класна робота  
-
+﻿using Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -75,11 +73,20 @@ namespace HomeWork
             int [] res = FilterArray((new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }), new int[2] { 1, 3 });
             foreach (int i in res)
             {
-                Console.WriteLine(i + " ");
+                Console.Write(i + " ");
             }
+            Console.WriteLine();
 
             //Ex 4
-            
+            try
+            {
+                WebSite site1 = new WebSite("Whatsapp", "https://www.whatsapp.com", "With private messaging and calling, you can \nbe yourself, speak freely and feel close ", "Hekllo");
+                site1.PrintInfo();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
